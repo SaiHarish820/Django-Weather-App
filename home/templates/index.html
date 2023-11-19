@@ -9,98 +9,12 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <style>
         body {
-            background: url('weather-background.jpg') center/cover;
-            color: white;
+            background: url('https://cdn.pixabay.com/animation/2023/03/05/12/04/12-04-00-252_512.gif') center/cover fixed;
+            color: black;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             height: 100%;
-        }
-
-        .weather-cont {
-            width: 35rem;
-            background-color: rgba(24, 195, 251, 0.8);
-            border: 0.35rem solid white;
-            border-radius: 1rem;
-            padding: 1rem 0.8rem;
-            margin: auto;
-            margin-top: 2rem;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-        }
-
-        .city-search {
-            position: relative;
-            width: 20em;
-            margin: auto;
-        }
-
-        .city-search input {
-            font-weight: 600;
-            color: #333;
-            background-color: rgba(255, 255, 255, 0.9);
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 8px;
-        }
-
-        .location {
-            position: absolute;
-            left: 0.5em;
-            top: 0.5em;
-        }
-
-        .city-name {
-            font-size: 1.5em;
-            margin-bottom: 5px;
-        }
-
-        .temp {
-            font-weight: bold;
-            font-size: 2.5em;
-            margin: 0;
-        }
-
-        .temp-details {
-            width: 22em;
-            margin: auto;
-            text-align: center;
-        }
-
-        .temp-details p {
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .temp-extra p {
-            margin-bottom: 0;
-        }
-
-        .temp-div p {
-            margin-bottom: 0;
-        }
-
-        .error-msg {
-            font-size: 2em;
-            color: red;
-            font-weight: bold;
-        }
-
-        @media screen and (max-width:600px) {
-            .weather-cont {
-                width: auto;
-                margin: auto 1rem;
-                margin-top: 2rem;
-            }
-        }
-
-         body {
-            background: url('weather-background.jpg') center/cover fixed;
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            animation: subtleMotion 20s infinite alternate linear;
         }
 
         @keyframes subtleMotion {
@@ -113,19 +27,20 @@
         }
 
         .weather-cont {
-            width: 35rem;
-            background-color: rgba(24, 195, 251, 0.8);
+            max-width: 35rem;
+            background-color: rgba(255, 255, 255, 0.5); /* Updated to transparent color */
             border: 0.35rem solid white;
             border-radius: 1rem;
             padding: 1rem 0.8rem;
             margin: auto;
             margin-top: 2rem;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 0, 0, 0.5); /* Added black shadow */
         }
 
         .city-search {
             position: relative;
-            width: 20em;
+            width: 100%;
+            max-width: 20em;
             margin: auto;
         }
 
@@ -136,6 +51,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             padding: 8px;
+            width: 100%;
         }
 
         .location {
@@ -156,7 +72,7 @@
         }
 
         .temp-details {
-            width: 22em;
+            width: 100%;
             margin: auto;
             text-align: center;
         }
@@ -199,7 +115,7 @@
             <div class="city-search d-flex flex-column align-items-center">
                 <input type="text" class="form-control px-5" aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-lg" name="input-city" placeholder="Enter Your City" required>
-                <img class="location" src="/static/img/geo-alt.svg" alt="search" width="20" height="25">
+                <img class="location" src="https://cdn.pixabay.com/photo/2016/03/22/04/23/map-1272165_1280.png" alt="search" width="20" height="25">
                 <button type="submit" class="btn btn-warning my-2 submit-btn">Search</button>
             </div>
         </form>
