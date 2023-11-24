@@ -38,3 +38,5 @@ It will run the application on [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 **Yeah!** Now the application is ready to use  
 Open your browser and go to **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)** and enjoy the application
+
+Deployed in pythonanywhere : https://saiharish821.pythonanywhere.com/
